@@ -100,6 +100,13 @@ const de = bvdsText.filter((street) => street.includes("de")); */
 const sortedByLast = people.sort((a,b)=> a.split(",")[0] > b.split(",")[0] ? -1:1)
 
 // 8. Solution
+const sumOfInstances = data.reduce((obj, vehicle)=> {
+if (!obj[vehicle]){
+  obj[vehicle] = 0;
+}
+  obj[vehicle]++;
+  return obj;},  {})
+  console.log(sumOfInstances)
 
   </script>
 </body>
