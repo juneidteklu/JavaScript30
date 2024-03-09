@@ -61,6 +61,43 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+
+
+    // 1. Solution
+const fifteen = inventors.filter(function (element){
+  if (element["year"] >= 1500 && element["year"] < 1600){
+    return true;}
+  }
+)
+// 2. Solution 
+
+let names = inventors.map(function inventorNames(element){
+  return `${element["first"]}  ${element["last"]}`;
+})
+// 3. Solution
+
+const orderedArray = inventors.sort((a, b) => {
+  if(a.year > b.year){
+    return 1;
+  }
+  else {return -1};
+
+}) 
+// 4. Solution
+const ages = inventors.map(element => element.passed - element.year );
+const totalAges = ages.reduce((total,inventor) => total + inventor);
+
+// 5. Solution
+ages.sort((a,b) => a > b ? -1: 1  )
+
+// 6. Solution
+/* const bvds = document.querySelector(".mw-category");
+const bvdsArray = Array.from(bvds.querySelectorAll("a"));
+const bvdsText = bvdsArray.map((street) => street.textContent)
+const de = bvdsText.filter((street) => street.includes("de")); */
+
+// 7. Solution
+
   </script>
 </body>
 </html>
